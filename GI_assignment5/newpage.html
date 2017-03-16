@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Page</title>
+    <script src="index.html"></script>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <h1>Welcome to the New Page</h1>
+    <button id="startButton" onclick="startjsMessage()">Start</button>
+    <button id="stopButton" onclick="stopjsMessage()">Stop</button>
+    <script> 
+        var myvar;
+        function startjsMessage() {
+            var myvar = setInterval(function() { console.log("Learning JavaScript is fun!");}, 2000);
+        }
+        
+        function stopjsMessage() {
+            window.clearInterval(myvar);
+            var myvar = setInterval(function() { console.log("Learning JavaScript is fun!");}, 2000);
+        }
+    </script>
+    <div class="dropdown">
+       <button onclick="dropIt()" class="dropButton">Dropdown Menu</button>
+       <div id="myDropdown" class="dropItems">
+           <a href="#">About</a><br>
+           <a href="#">Products</a><br>
+           <a href="#">Testimonials</a><br>
+           <a href="#">Contact Us</a><br>
+       </div>
+       <button onclick="alertBox" class="selectButton">Select</button>
+       </div>
+       <script>
+           function dropIt() {
+               document.getElementById("myDropdown").classList.toggle("show");
+           }
+           
+           if (!event.target.matches('.dropButton')) {
+               var dropdowns = document.getElementsByClassName("dropItems");
+               var i;
+               for (i = 0;1<dropItems.length; i++) {
+                   var openDropdown = dropdowns[i];
+                   if (openDropdown.classList.contains('show')) {
+                       openDropdown.classList.remove('show');
+                   }
+               }
+           }
+           function alertBox() {
+               window.alert("this one");
+           }
+       </script>
+       
+        
+   
+</body>
+</html>

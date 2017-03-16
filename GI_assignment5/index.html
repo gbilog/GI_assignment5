@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 5</title>
+    
+    <script src="script5.js">
+        window.addEventListener("load", init, false);
+        function init() {
+            var number3 = document.getElementById("button3");
+            number3.addEventListener("click", function() {
+        alert("I have been clicked");
+                    }, false);
+        }
+    </script>
+</head>
+<body>
+  
+   <button onclick="clickMessage()">Click Here!</button>
+   <script>
+       function clickMessage() {
+           alert("I have been clicked");
+       }
+   </script>
+
+     <button id = "number2">Click for Number 2</button>
+    <script>
+       var myElement = document.getElementById("number2");
+       myElement.onclick = function() {
+           alert("I have been clicked");
+       }
+   </script>
+   
+   
+   <button id= "button3">Click Me</button>
+   
+   <a id="redirect" href= 'http://www.google.com'>Visit Google</a>
+   <!--
+   <script>
+       redirect.addEventListener("click", blockRedirect, false);
+       function blockRedirect() {
+            alert("You just clicked on a link to redirect to Google");
+            var noGoogle = document.getElementById("redirect");
+            noGoogle.addEventListener("click", blockRedirect("click") {
+                                      click.stopPropagation();
+       });
+       
+   </script>
+   -->
+   
+<form>
+       <input id="textStuff" type="text" placeholder="Enter Something">
+       <input id="submitButton" type="submit" value="Submit">
+</form>
+<script>
+    var submitButton = document.getElementById("submitButton");
+submitButton.addEventListener("click",function(){
+    submitButton.disabled = true;
+}, false);
+    var textAlert = document.getElementById("textStuff");
+    submitButton.addEventListener("click", function(){
+        alert(textAlert.value)}, false);
+</script>
+
+<button onclick="newPage()" id="newPageButton">Click for NewPage</button>
+<script>
+    var newPageButton = document.getElementById("newPageButton");
+    newPageButton.addEventListener("click", newPage(),false);
+    function newPage() {        window.open("newpage.html","newpage","width=500,height=300");
+    }
+</script>
+<!--
+<script src="script5.js"></script>
+-->
+</body>
+
+</html>
